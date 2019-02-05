@@ -4,4 +4,15 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Mapper\" />
+    <Folder Include="DI\" />
+    <Folder Include="Dto\" />
+    <Folder Include="Filters\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cel.Esd.Domain\Cel.Esd.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
