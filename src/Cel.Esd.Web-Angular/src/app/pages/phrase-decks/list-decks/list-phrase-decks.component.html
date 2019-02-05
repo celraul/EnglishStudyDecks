@@ -1,0 +1,29 @@
+<div class="wrapper page-container">
+
+    <div class="header">
+        <h1 class="header__title">{{'List Phrase Decks' | translate }} </h1>
+        <!-- <h2 class="header__subtitle">with Flexbox</h2> -->
+    </div>
+
+    <div class="cards" dndDropzone (dndDrop)="onDrop($event, draggableListRight)">
+        <div class="card card-placeholder-ref" dndPlaceholderRef>
+            <div class="card__inner">
+                <span></span>
+            </div>
+        </div>
+
+        <div class="card" *ngFor="let deck of draggableListRight" [dndDraggable]="deck" [dndEffectAllowed]="deck.effectAllowed"
+            [dndDisableIf]="deck.disable" (dndStart)="onDragStart($event)" (dndMoved)="onDragged(deck, draggableListRight, 'move')"
+            (dndEnd)="onDragEnd($event)">
+            <div class="card__inner">
+                <span>{{deck.content.title}}</span>
+                <i class="fa fa-folder-o"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<a [routerLink]="['create']" class="new-deck-button">
+    <button type="button" class="btn btn-primary btn-circle btn-lg " matTooltip="{{'Click to create new deck' | translate }}">
+        <i class="fa fa-plus"></i>
+    </button>
+</a>

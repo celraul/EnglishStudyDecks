@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "variables";
+@import "bootstrap/bootstrap";
+@import "forms/forms";
+@import "spinner";
+@import "utils";
+@import "rtl";
+@import "responsive";
+@import"modais/modal-base";
+@import "base";
+@media print {
+    .breadcrumb {
+        display: none !important;
+    }
+}

@@ -1,0 +1,14 @@
+.fs-12 {
+    font-size: 12px;
+}
+
+.inputs-login {
+    margin-bottom: 5px;
+
+    .mat-form-field-label {
+        color: white !important;
+    }
+    .mat-form-field-underline {
+        background-color: white;
+    }
+}

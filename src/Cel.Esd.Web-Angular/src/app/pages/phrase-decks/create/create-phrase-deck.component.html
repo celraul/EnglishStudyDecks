@@ -1,0 +1,103 @@
+<div class="page-header">
+    <h1>{{'Create New Deck' | translate}}</h1>
+    <hr>
+</div>
+
+<form id="formCreatePhraseDeck" class="form-base" [formGroup]="formCreatePhraseDeck" accept-charset="UTF-8" role="form"
+    (ngSubmit)="savePhraseDeck(formCreatePhraseDeck.value)">
+    <div class="row">
+        <div class="col-md-12">
+            <mat-form-field class="full-width">
+                <input matInput placeholder="{{'Title Deck' | translate }}" formControlName="title" maxlength="20">
+                <mat-error *ngIf="formCreatePhraseDeck.get('title').hasError('required')">
+                    {{ "Field is required" | translate }}
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <mat-form-field class="full-width">
+        <textarea matInput placeholder="{{'Description' | translate }}" formControlName="description" maxlength="50"></textarea>
+    </mat-form-field>
+
+    <mat-divider></mat-divider>
+
+    <mat-accordion>
+        <mat-expansion-panel (closed)="createPhraseOpen = false;" (opened)="createPhraseOpen = true;" [expanded]="createPhraseOpen"
+            [formGroup]="formGroupAddPhrase">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{'Create new phrase' | translate }}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="{{'Phrase' | translate }}" formControlName="phrase" maxlength="100">
+                        <mat-error *ngIf="formGroupAddPhrase.get('phrase').hasError('required')">
+                            {{ "Field is required" | translate }}
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="{{'Translate Phrase' | translate }}" formControlName="translatePhrase"
+                            maxlength="100">
+                        <mat-error *ngIf="formGroupAddPhrase.get('translatePhrase').hasError('required')">
+                            {{ "Field is required" | translate }}
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <button mat-raised-button color="primary" class="pull-right" [disabled]="formGroupAddPhrase.invalid"
+                (click)="savePhrase(formGroupAddPhrase.value); $event.preventDefault();">{{
+                'Save Phrase' | translate}}</button>
+
+        </mat-expansion-panel>
+    </mat-accordion>
+
+
+    <div class="mat-elevation-z8 table-phrases">
+        <table mat-table [dataSource]="dataSource">
+            <!-- Position Column -->
+            <ng-container matColumnDef="phrase">
+                <th mat-header-cell *matHeaderCellDef> {{'Phrase' | translate }} </th>
+                <td mat-cell *matCellDef="let element"> {{element.phrase}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="translatePhrase">
+                <th mat-header-cell *matHeaderCellDef> {{'Translate phrase' | translate }} </th>
+                <td mat-cell *matCellDef="let element"> {{element.translatePhrase}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef class="text-center"> {{'Actions' | translate }} </th>
+                <td mat-cell *matCellDef="let element" class="text-center">
+                    <button mat-raised-button color="primary" (click)="editPhrase(element)" class="action-button-phrase">{{
+                        'Edit' |
+                        translate}}</button>
+                    <button mat-raised-button color="warn" (click)="deletePhrase(element)" class="action-button-phrase">{{
+                        'Delete' |
+                        translate}}</button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>
+
+    <button mat-raised-button [routerLink]="['/phrase-decks']" class="margin-top-action-button pull-left">{{
+        'Back' |
+        translate}}</button>
+
+    <button mat-raised-button color="primary" class="margin-top-action-button pull-right" [disabled]="formCreatePhraseDeck.invalid">{{
+        'Save Deck' |
+        translate}}</button>
+</form>

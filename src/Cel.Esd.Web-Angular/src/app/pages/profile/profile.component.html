@@ -1,0 +1,36 @@
+<div class="page-header">
+    <h1>{{'Profile' | translate}}</h1>
+    <hr>
+</div>
+
+
+<div class="container-maroto">
+    <div class="title-container-maroto">
+    </div>
+    <div class="body-container-maroto">
+
+        <form role="form" class="form-base" [formGroup]="formProfile" (ngSubmit)="saveProfile(formProfile.value)">
+            <div class="form-content">
+                <mat-form-field class="full-width">
+                    <input type="text" matInput placeholder="{{'Nickname' | translate}}" class="form-control input-lg"
+                        formControlName="nickname" id="nickname" maxlength="15">
+                    <mat-error *ngIf="formProfile.get('nickname').hasError('required')">
+                        {{ 'Nickname is' | translate }} <strong>{{ 'required' | translate }}</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="{{'E-mail' | translate }}" class="form-control input-lg"
+                        formControlName="email" maxlength="100">
+       
+                </mat-form-field>
+
+                <button mat-raised-button color="primary" class="save-button pull-right" [disabled]="formProfile.invalid">{{
+                    'Save' |
+                    translate}}</button>
+
+            </div>
+        </form>
+
+    </div>
+</div>

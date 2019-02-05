@@ -1,0 +1,58 @@
+<div class="login-page" [@routerTransition]>
+    <div class="row justify-content-md-center">
+        <div class="col-md-4">
+            <img class="user-avatar" src="assets/images/logo.png" width="150px" />
+            <h1>English Study Decks</h1>
+            <form role="form" class="form-base" [formGroup]="formRegister" (ngSubmit)="register(formRegister.value)">
+                <div class="form-content">
+                    <mat-form-field class="full-width inputs-login">
+                        <input type="text" matInput placeholder="{{'Nickname' | translate}}" class="form-control input-lg"
+                            formControlName="nickname" id="nickname" maxlength="15">
+                        <mat-error *ngIf="formRegister.get('nickname').hasError('required')">
+                            {{ 'Nickname is' | translate }} <strong>{{ 'required' | translate }}</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width inputs-login">
+                        <input matInput placeholder="{{'E-mail' | translate }}" class="form-control input-lg"
+                            formControlName="email" maxlength="100">
+                        <mat-error *ngIf="formRegister.get('email').hasError('required')">
+                            {{ 'E-mail is' | translate }} <strong>{{ 'required' | translate }}</strong>
+                        </mat-error>
+                        <mat-error *ngIf="formRegister.get('email').hasError('email')">
+                            {{ 'E-mail invalid' | translate }}
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width inputs-login">
+                        <input type="password" matInput placeholder="{{'Password' | translate }}" class="form-control input-lg"
+                            formControlName="password" id="password">
+                        <mat-error *ngIf="formRegister.get('password').hasError('required')">
+                            {{ 'Password is' | translate }} <strong>{{ 'required' | translate }}</strong>
+                        </mat-error>
+                        <mat-error *ngIf="formRegister.get('password').hasError('minlength')">
+                            {{ 'Password should be min 5 characteres' | translate }}
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width inputs-login">
+                        <input type="password" matInput placeholder="{{'Confirm password' | translate }}" class="form-control input-lg"
+                            formControlName="confirmPassword" id="confirmPassword">
+                        <mat-error *ngIf="formRegister.get('confirmPassword').hasError('required')">
+                            {{ 'Confirm password is' | translate }} <strong>{{ 'required' | translate }}</strong>
+                        </mat-error>
+
+                        <mat-error *ngIf="formRegister.get('confirmPassword').hasError('compare')">
+                            {{ "Passwords don't match" | translate }}
+                        </mat-error>
+
+                    </mat-form-field>
+                </div>
+                <a class="btn rounded-btn" [routerLink]="['/login']"> {{'Log in' | translate}} </a>
+                &nbsp;
+                <button type="submit" class="btn rounded-btn" [disabled]="formRegister.invalid">{{'Register' |
+                    translate}}</button>
+            </form>
+        </div>
+    </div>
+</div>
