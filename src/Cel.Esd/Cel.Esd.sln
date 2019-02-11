@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cel.Esd.Api", "Cel.Esd.Api\Cel.Esd.Api.csproj", "{3B951A84-6C1F-4E3C-934C-662A66A22C86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cel.Esd.Api", "Cel.Esd.Api\Cel.Esd.Api.csproj", "{3B951A84-6C1F-4E3C-934C-662A66A22C86}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4B5BF766-CFC9-4BC4-9257-4A376BCB5F91}"
 	ProjectSection(SolutionItems) = preProject
@@ -22,19 +22,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - Identity", "4.2 - Ide
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{1D757E38-370E-4F54-A159-A631FEE45B5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cel.Esd.Application", "Cel.Esd.Application\Cel.Esd.Application.csproj", "{7CBE041E-7251-4B6A-9D7B-2CAB89E6A60F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cel.Esd.Application", "Cel.Esd.Application\Cel.Esd.Application.csproj", "{7CBE041E-7251-4B6A-9D7B-2CAB89E6A60F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cel.Esd.Domain", "Cel.Esd.Domain\Cel.Esd.Domain.csproj", "{C8254735-79BB-4F86-ABD0-5DDB5DA443C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cel.Esd.Domain", "Cel.Esd.Domain\Cel.Esd.Domain.csproj", "{C8254735-79BB-4F86-ABD0-5DDB5DA443C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cel.Esd.SqlServer", "Cel.Esd.SqlServer\Cel.Esd.SqlServer.csproj", "{8133238F-D336-4095-88CC-ADC8C5D10C31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cel.Esd.SqlServer", "Cel.Esd.SqlServer\Cel.Esd.SqlServer.csproj", "{8133238F-D336-4095-88CC-ADC8C5D10C31}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlServer", "SqlServer", "{0BE895CA-0E26-4F96-873E-9C8A318D4F16}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.3 - Azure", "4.3 - Azure", "{843D8B1D-E053-4E3D-B3EC-F1CBFD7773FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cel.Esd.Identity", "Cel.Esd.Identity\Cel.Esd.Identity.csproj", "{822A99F9-5C26-4BEE-9DB0-7C1C67DCA679}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cel.Esd.Identity", "Cel.Esd.Identity\Cel.Esd.Identity.csproj", "{822A99F9-5C26-4BEE-9DB0-7C1C67DCA679}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cel.Esd.Azure", "Cel.Esd.Azure\Cel.Esd.Azure.csproj", "{1FDD071F-AEF8-46FA-A862-EB347A99AF6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cel.Esd.Azure", "Cel.Esd.Azure\Cel.Esd.Azure.csproj", "{1FDD071F-AEF8-46FA-A862-EB347A99AF6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cel.Esd.EntityFramework", "Cel.Esd.EntityFramework\Cel.Esd.EntityFramework.csproj", "{FCF2FB44-AD1F-4288-B558-6A82FE96004B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -66,6 +68,10 @@ Global
 		{1FDD071F-AEF8-46FA-A862-EB347A99AF6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FDD071F-AEF8-46FA-A862-EB347A99AF6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FDD071F-AEF8-46FA-A862-EB347A99AF6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCF2FB44-AD1F-4288-B558-6A82FE96004B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCF2FB44-AD1F-4288-B558-6A82FE96004B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCF2FB44-AD1F-4288-B558-6A82FE96004B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCF2FB44-AD1F-4288-B558-6A82FE96004B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +87,7 @@ Global
 		{843D8B1D-E053-4E3D-B3EC-F1CBFD7773FB} = {0F696859-94EE-4D60-9FE6-F828698E875A}
 		{822A99F9-5C26-4BEE-9DB0-7C1C67DCA679} = {CBE9E722-88FB-45F4-B0B1-EF3912EC85C6}
 		{1FDD071F-AEF8-46FA-A862-EB347A99AF6B} = {843D8B1D-E053-4E3D-B3EC-F1CBFD7773FB}
+		{FCF2FB44-AD1F-4288-B558-6A82FE96004B} = {0BE895CA-0E26-4F96-873E-9C8A318D4F16}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {330F3621-C00A-428C-BA3E-2361526BC3EF}

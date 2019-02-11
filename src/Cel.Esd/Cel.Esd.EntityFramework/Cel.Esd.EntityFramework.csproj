@@ -5,9 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DI\" />
-    <Folder Include="Filters\" />
-    <Folder Include="Interfaces\Commands\" />
+    <ProjectReference Include="..\Cel.Esd.Domain\Cel.Esd.Domain.csproj" />
+    <ProjectReference Include="..\Cel.Esd.SqlServer\Cel.Esd.SqlServer.csproj" />
   </ItemGroup>
 
 </Project>

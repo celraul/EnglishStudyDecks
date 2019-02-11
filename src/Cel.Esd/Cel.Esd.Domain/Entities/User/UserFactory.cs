@@ -61,10 +61,9 @@
             {
                 if (!_user.IsValid)
                     return new User();
-               
+
                 return _user;
             }
         }
-
     }
 }
