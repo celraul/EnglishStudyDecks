@@ -18,9 +18,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Domain", "03 - Domain"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Infrastructure", "04 - Infrastructure", "{0F696859-94EE-4D60-9FE6-F828698E875A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - Identity", "4.2 - Identity", "{CBE9E722-88FB-45F4-B0B1-EF3912EC85C6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.3 - Identity", "4.3 - Identity", "{CBE9E722-88FB-45F4-B0B1-EF3912EC85C6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{1D757E38-370E-4F54-A159-A631FEE45B5E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - Data", "4.2 - Data", "{1D757E38-370E-4F54-A159-A631FEE45B5E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cel.Esd.Application", "Cel.Esd.Application\Cel.Esd.Application.csproj", "{7CBE041E-7251-4B6A-9D7B-2CAB89E6A60F}"
 EndProject
@@ -30,13 +30,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cel.Esd.SqlServer", "Cel.Es
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlServer", "SqlServer", "{0BE895CA-0E26-4F96-873E-9C8A318D4F16}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.3 - Azure", "4.3 - Azure", "{843D8B1D-E053-4E3D-B3EC-F1CBFD7773FB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.4 - Azure", "4.4 - Azure", "{843D8B1D-E053-4E3D-B3EC-F1CBFD7773FB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cel.Esd.Identity", "Cel.Esd.Identity\Cel.Esd.Identity.csproj", "{822A99F9-5C26-4BEE-9DB0-7C1C67DCA679}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cel.Esd.Azure", "Cel.Esd.Azure\Cel.Esd.Azure.csproj", "{1FDD071F-AEF8-46FA-A862-EB347A99AF6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cel.Esd.EntityFramework", "Cel.Esd.EntityFramework\Cel.Esd.EntityFramework.csproj", "{FCF2FB44-AD1F-4288-B558-6A82FE96004B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cel.Esd.EntityFramework", "Cel.Esd.EntityFramework\Cel.Esd.EntityFramework.csproj", "{FCF2FB44-AD1F-4288-B558-6A82FE96004B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - CrossCutting", "4.1 - CrossCutting", "{9A93070B-4A95-455B-A410-1BD10280F083}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cel.Esd.DependencyInjection", "Cel.Esd.DependencyInjection\Cel.Esd.DependencyInjection.csproj", "{E691FE01-0877-425A-A9C9-192002CEBCEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,6 +76,10 @@ Global
 		{FCF2FB44-AD1F-4288-B558-6A82FE96004B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCF2FB44-AD1F-4288-B558-6A82FE96004B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCF2FB44-AD1F-4288-B558-6A82FE96004B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E691FE01-0877-425A-A9C9-192002CEBCEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E691FE01-0877-425A-A9C9-192002CEBCEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E691FE01-0877-425A-A9C9-192002CEBCEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E691FE01-0877-425A-A9C9-192002CEBCEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +96,8 @@ Global
 		{822A99F9-5C26-4BEE-9DB0-7C1C67DCA679} = {CBE9E722-88FB-45F4-B0B1-EF3912EC85C6}
 		{1FDD071F-AEF8-46FA-A862-EB347A99AF6B} = {843D8B1D-E053-4E3D-B3EC-F1CBFD7773FB}
 		{FCF2FB44-AD1F-4288-B558-6A82FE96004B} = {0BE895CA-0E26-4F96-873E-9C8A318D4F16}
+		{9A93070B-4A95-455B-A410-1BD10280F083} = {0F696859-94EE-4D60-9FE6-F828698E875A}
+		{E691FE01-0877-425A-A9C9-192002CEBCEC} = {9A93070B-4A95-455B-A410-1BD10280F083}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {330F3621-C00A-428C-BA3E-2361526BC3EF}

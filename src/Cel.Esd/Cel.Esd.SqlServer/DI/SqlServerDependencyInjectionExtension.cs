@@ -4,11 +4,11 @@ using Cel.Esd.SqlServer.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
-namespace Cel.Esd.SqlServer.DI
+namespace Microsoft.Extensions.DependencyInjection
 {
-    public static class SqlServerDependencyInjection
+    public static class SqlServerDependencyInjectionExtension
     {
-        public static IServiceCollection AddSqlServerDependency(this IServiceCollection services)
+        public static IServiceCollection AddSqlServerDependencyInjection(this IServiceCollection services)
         {
             services.TryAddScoped<IDbContext>(provider => provider.GetService<EsdDbContext>());
             services.TryAddSingleton<IConnectionFactory, ConnectionFactory>();

@@ -1,6 +1,8 @@
-﻿namespace Cel.Esd.Domain.Entities.User
+﻿using Cel.Esd.Domain.Interfaces.Factories;
+
+namespace Cel.Esd.Domain.Entities.User
 {
-    public class UserFactory
+    public class UserFactory : IUserFactory
     {
         public UserFactory() { }
 

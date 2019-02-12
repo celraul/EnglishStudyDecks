@@ -19,17 +19,20 @@ namespace Cel.Esd.SqlServer.EntityFramework.Mapping
                    .IsRequired();
 
             builder.Property(entity => entity.UpdateDate)
-                   .HasColumnName("CreateDate");
+                   .HasColumnName("UpdateDate");
 
             builder.Property(entity => entity.Name)
                    .HasColumnName("Name")
+                   .HasMaxLength(100)
                    .IsRequired();
 
             builder.Property(entity => entity.Email)
                    .HasColumnName("Email")
+                   .HasMaxLength(100)
                    .IsRequired();
 
             builder.Property(entity => entity.Description)
+                   .HasMaxLength(300)
                    .HasColumnName("Description");
 
             builder.Property(entity => entity.Active)
